@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin-top: auto;
+    background-color: #D9DCD6;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav>a{
+    display:flex ;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: #16425B;
+}
+.avatar-banner{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+button{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    background-color: transparent;
+    border: none;
+
+}
+.video-description>a{
+    text-decoration: none;
+    color: #16425B;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.video-description>a:hover{
+    color: white;
+}
+
+.avatar-banner>a{
+    color: #BDBDBD;
+}
+.avatar-banner>p{
+    padding: 1rem;
+}
+
+.user-task-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.user-task-container > .user-task{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #3A7CA5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 12.5rem;
+    height: 9.38rem;
+    overflow: scroll;
+    font-size: 0.95em;
+    
+
+}
+h3{
+    color: #ffff;
+}
+.tarefas{
+    margin-top: 10px;
+}
+.description{
+    color:#ffff;
+    height: auto;
+    width: auto;
+}
+li{
+    display: flex;
+    gap: 1rem;
+} 
+.materia-span{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    color: #16425B;
+    font-size: 1.rem;
+    font-weight: 700;
+}
+iframe{
+    border-radius: 0.5rem;
+}
+.video-container{
+    width: auto;
+    height: 430px;
+    background-color:#3A7CA5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+.video-description{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+}
+.video-description > span {
+    color:#ffff;
+    opacity: 320%;
+}
+.video-description > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.user-percent{
+    position: relative;
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #3A7CA5;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+    border-radius: 0.5rem;
+
+
+}
+.user-percent .percent {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.user-percent .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.user-percent .percent svg circle{
+    width: 1500px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+.user-percent .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3
+}
+.user-percent .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 87) / 100 );
+    stroke: #FFBC42
+}
+
+.user-percent .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFBC42;
+}
+.user-percent .percent .number h2{
+    font-size: 2.5rem;
+}
+.user-percent .percent .number h2 span{
+    font-size: 1.5rem;
+}
+.user-percent .text{
+    padding: 10px 0 0;
+    color: #999;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+    

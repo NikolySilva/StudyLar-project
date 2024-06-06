@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    margin-top: auto;
+    background-color: #D9DCD6;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav>a{
+    display:flex ;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: #16425B;
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem ;
+    color: #16425B;
+}
+section{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+
+    border-bottom: 1px solid #16425B;
+}
+.lessoncheck {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.click-lesson{
+    text-decoration: none;
+    color: inherit;
+}
+.click-lesson:active{
+    text-decoration: none;
+    color:inherit
+}
+.click-lesson:focus{
+    text-decoration: none;
+    color:inherit
+}
+.click-lesson:hover{
+    text-decoration: none;
+    color:inherit
+}
+.click-lesson:visited{
+    text-decoration: none;
+    color:inherit
+}
