@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aula.css">
-    <script src="/studylar/aula.js"></script>
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -21,7 +20,7 @@
             </svg>
         </a>
         <section>
-            <div class="task-video" href="/studylar/fazertarefas.html">
+            <div class="task-video" href="/fazertarefas.html">
                 <iframe width="380" height="300" src="https://www.youtube.com/embed/eFKBRvEs8lU?si=emHxtirtWMeFMHc6"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -95,14 +94,42 @@
 
     <script>
         document.getElementById("post-comment").addEventListener('click', function (event) {
-            Swal.fire({
-                title: 'Enviado',
-                text: 'Comentário enviado!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
+            // Captura o valor do comentário
+            const commentInput = document.querySelector('.comment-input');
+            const commentText = commentInput.value.trim();
+        
+            // Verifica se o comentário não está vazio
+            if (commentText !== "") {
+                // Cria um novo elemento de comentário
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.textContent = commentText;
+        
+                // Adiciona o novo comentário à div de contêiner de comentários
+                const commentContainer = document.querySelector('.comment-container');
+                commentContainer.appendChild(newComment);
+        
+                // Limpa o campo de entrada de comentário
+                commentInput.value = "";
+        
+                // Exibe uma mensagem de confirmação
+                Swal.fire({
+                    title: 'Enviado',
+                    text: 'Comentário enviado!',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                // Exibe uma mensagem de erro se o comentário estiver vazio
+                Swal.fire({
+                    title: 'Erro',
+                    text: 'O comentário não pode estar vazio!',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
         });
-
+        
     </script>
 </body>
 
